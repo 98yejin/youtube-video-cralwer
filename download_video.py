@@ -41,7 +41,7 @@ def get_link(source):
     return href
 
 def auto_scroll(url):
-    driver = webdriver.Chrome('/Users/dai/Desktop/ml_py/dlyt/chromedriver')
+    driver = webdriver.Chrome('') #크롬 드라이버의 
     driver.get(url)
     time.sleep(1)
     sleep_time = 0.5
@@ -152,10 +152,7 @@ def download_video(keyword, href):
 
 def main():
     keywords = [''] #유튜브에 검색할 키워드
-    #이미한거 : '아나운서 발성'
-#     keywordtest = ['인터뷰','자기소개
     for keyword in keywords:
-#     for keyword in keywordtest:
         csv_path = '/Volumes/Transcend/data/keyword_csv/'+keyword+'.csv'
         print('#####'+keyword+'다운로드 시작'+'#####')
         url = get_keyword(keyword)
