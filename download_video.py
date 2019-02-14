@@ -18,8 +18,7 @@ import random
 sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding='utf-8')
 sys.stderr = io.TextIOWrapper(sys.stderr.detach(), encoding = 'utf-8')
 
-#키워드 넣고 나중에 계속 반복해서 돌릴려면 키워드 받는 함수 만들어서
-#나중에 필요한 키워드 다 때려넣은 리스트 반복문 돌리는게 좋을거같당
+
 
 def get_keyword(keyword):
     base = "https://www.youtube.com/results?search_query=%"
@@ -152,11 +151,11 @@ def download_video(keyword, href):
 
 
 def main():
-    keywords = ['1분 자기소개','1분 자기소개 예시', '화장법', '메이크업', '큐앤에이 답변', '스피치']
-    keywordtest = ['인터뷰','자기소개']
+    keywords = [''] #유튜브에 검색할 키워드
     #이미한거 : '아나운서 발성'
-    # for keyword in keywords:
-    for keyword in keywordtest:
+#     keywordtest = ['인터뷰','자기소개
+    for keyword in keywords:
+#     for keyword in keywordtest:
         csv_path = '/Volumes/Transcend/data/keyword_csv/'+keyword+'.csv'
         print('#####'+keyword+'다운로드 시작'+'#####')
         url = get_keyword(keyword)
