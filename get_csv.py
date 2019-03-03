@@ -75,7 +75,7 @@ def make_csv(csv_path, href):
 
 video_dir = '/Volumes/Transcend/data/video/'
 csv_dir = '/Volumes/Transcend/data/keyword_csv/'
-folders =[ '자기소개법', '지원동기', '면접합격법', '입사후포부', '대답해드립니다', '질문해주세요', '하울', '면접 탈락 사례']
+folders =[]
 for f in folders:
     href = []
     dir = video_dir+f
